@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { BoardService } from 'src/app/services/board.service';
 
 @Component({
   selector: 'app-boards-dialog',
@@ -13,13 +14,13 @@ export class BoardsDialogComponent implements OnInit {
     title: new FormControl(null, [Validators.required])
   })
 
-  constructor(private dialogRef: MatDialogRef<BoardsDialogComponent>) { }
+  constructor(private dialogRef: MatDialogRef<BoardsDialogComponent>, private boardService: BoardService) { }
 
   ngOnInit(): void {
   }
 
   create() {
-
+    this.boardService.createBoard(this.boardForm.get('title')?.value)
   }
 
   close() {
