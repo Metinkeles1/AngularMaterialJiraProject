@@ -21,6 +21,7 @@ export class BoardsDialogComponent implements OnInit {
 
   create() {
     this.boardService.createBoard(this.boardForm.get('title')?.value)
+    this.dialogRef.close();
   }
 
   close() {

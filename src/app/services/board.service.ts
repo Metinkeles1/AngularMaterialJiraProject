@@ -22,4 +22,9 @@ export class BoardService {
     this.boards.push(newBoardObj);
     localStorage.setItem('boards', JSON.stringify(this.boards));
   }
+
+  public deleteBoard(boardNumber: number) {
+    this.boards.splice(boardNumber, 1);
+    localStorage.setItem('boards', JSON.stringify(this.boards));
+  }
 }
