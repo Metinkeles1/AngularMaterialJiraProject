@@ -7,7 +7,6 @@ export class BoardService {
   public boards: Array<any> = [];
 
   constructor() {
-    debugger
     let str = localStorage.getItem('boards');
     if (str != null) {
       this.boards = JSON.parse(str);
