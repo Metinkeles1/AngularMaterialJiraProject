@@ -17,6 +17,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { ViewBoardComponent } from './view-board/view-board.component';
 import { ViewBoardDialogComponent } from './view-board/view-board-dialog/view-board-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    MatCardModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
